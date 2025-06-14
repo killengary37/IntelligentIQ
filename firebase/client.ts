@@ -3,7 +3,7 @@ import { getAuth } from 'firebase/auth';
 import { getFirestore} from "firebase/firestore";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyA60sfPJ4bEcI3zn_IhHBPRgWO6aOt0YCk",
+    apiKey: "keys",
     authDomain: "intelligentiq-cccb1.firebaseapp.com",
     projectId: "intelligentiq-cccb1",
     storageBucket: "intelligentiq-cccb1.firebasestorage.app",
