@@ -9,7 +9,9 @@ import {getCurrentUser} from "@/lib/actions/auth.actions";
 
 const Page = async ({params}: RouteParams) => {
     const { id } = await params;
+
     const user = await getCurrentUser();
+
     const interview = await getInterviewById(id);
 
     if(!interview) redirect('/')
@@ -30,11 +32,12 @@ const Page = async ({params}: RouteParams) => {
             </div>
             
             <Agent
-                userName={user?.name}
-                type={user?.id}
+                userName={user?.name!}
+                userId={user?.id}
                 interviewId={id}
                 type="interview"
                 questions={interview.questions}
+
             />
         </>
     )
